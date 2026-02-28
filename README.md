@@ -1,259 +1,51 @@
-# BardTell - Современный мессенджер с видеозвонками и чатами
+# Welcome to your Expo app 👋
 
-> **BardTell** — это кроссплатформенный мессенджер нового поколения с поддержкой видеозвонков, голосовых звонков и мгновенных сообщений. Безопасное общение для личного и бизнес использования.
+This is an [Expo](https://expo.dev) project created with [`create-expo-app`](https://www.npmjs.com/package/create-expo-app).
 
-<p align="center">
-  <img src="./assets/images/icon.png" width="120" alt="BardTell Logo">
-</p>
+## Get started
 
-<p align="center">
-  <a href="#-возможности">Возможности</a> •
-  <a href="#-установка">Установка</a> •
-  <a href="#-технологии">Технологии</a> •
-  <a href="#-лицензия">Лицензия</a>
-</p>
+1. Install dependencies
 
----
+   ```bash
+   npm install
+   ```
 
-## 🌟 О проекте
+2. Start the app
 
-**BardTell** — это инновационный мессенджер, разработанный на React Native с использованием современных технологий WebRTC и Socket.IO. Приложение предоставляет полный функционал для коммуникации: текстовые чаты, HD видеозвонки и кристально чистые голосовые звонки.
+   ```bash
+   npx expo start
+   ```
 
-### 🎯 Ключевые особенности
+In the output, you'll find options to open the app in a
 
-- � **Кроссплатформенность** — работает на iOS, Android и веб
-- 📹 **Видеозвонки HD** — высокое качество видео даже при слабом интернете
-- 🎙️ **Голосовые звонки** — чистое аудио с шумоподавлением
-- 💬 **Мгновенные сообщения** — real-time чаты с индикаторами онлайна
-- 🔒 **Безопасность** — JWT аутентификация и шифрование данных
-- 🎨 **Telegram-like дизайн** — привычный и удобный интерфейс
+- [development build](https://docs.expo.dev/develop/development-builds/introduction/)
+- [Android emulator](https://docs.expo.dev/workflow/android-studio-emulator/)
+- [iOS simulator](https://docs.expo.dev/workflow/ios-simulator/)
+- [Expo Go](https://expo.dev/go), a limited sandbox for trying out app development with Expo
 
----
+You can start developing by editing the files inside the **app** directory. This project uses [file-based routing](https://docs.expo.dev/router/introduction).
 
-## ✨ Возможности
+## Get a fresh project
 
-### 💬 Чаты и сообщения
-- Личные и групповые чаты с неограниченным числом участников
-- Real-time сообщения через WebSocket с мгновенной доставкой
-- История переписки с умным поиском по сообщениям
-- Отправка фото, видео, документов и голосовых сообщений
-- Индикаторы набора текста и статусы прочтения сообщений
-
-### 📹 Видео и аудио звонки
-- HD видеозвонки с адаптивным качеством под любой интернет
-- Голосовые звонки с шумоподавлением и эхокомпенсацией
-- Поддержка групповых видеоконференций до 50 участников
-- Переключение между фронтальной и основной камерой
-- Полноэкранный режим видео с возможностью записи
-
-### � Управление пользователями
-- Быстрая регистрация по email или номеру телефона
-- Подтверждение email через 6-значный код для безопасности
-- Персональные профили с аватарами и статусами
-- Список контактов с индикаторами онлайн-статуса
-- Гибкие настройки приватности и безопасности
-
-### 🔔 Уведомления
-- Push-уведомления о новых сообщениях и звонках
-- Звуковые сигналы и вибрация для входящих звонков
-- Настраиваемые звуки уведомлений для разных типов событий
-- Уведомления на заблокированном экране iOS и Android
-
----
-
-## 🛠️ Технологии
-
-### Frontend (React Native + Expo)
-- ⚛️ **React Native** — кроссплатформенная разработка
-- 📘 **TypeScript** — строгая типизация
-- 🚀 **Expo Router** — навигация и роутинг
-- 🔌 **Socket.IO Client** — real-time коммуникация
-- 📹 **WebRTC** — видео и аудио звонки
-
-### Backend (Node.js)
-- 🟢 **Express.js** — веб-сервер
-- 🍃 **MongoDB Atlas** — база данных
-- 📋 **Mongoose** — ODM для MongoDB
-- 🔐 **JWT** — аутентификация
-- 📧 **Nodemailer** — отправка email
-- 🔒 **bcryptjs** — хеширование паролей
-
----
-
-## 🚀 Развёртывание и установка
-
-### 📱 Мобильное приложение
-
-#### Android
-```bash
-# Скачайте APK или установите через Google Play
-eas build --platform android --profile production
-```
-
-#### iOS
-```bash
-# Требуется Apple Developer аккаунт
-eas build --platform ios --profile production
-```
-
-### 💻 Локальная разработка
+When you're ready, run:
 
 ```bash
-# 1. Клонируйте репозиторий
-git clone https://github.com/kaitarukian/bardtell.git
-cd bardtell
-
-# 2. Установите зависимости
-npm install
-
-# 3. Настройте переменные окружения
-cp .env.example .env
-# Отредактируйте .env файл
-
-# 4. Запустите бэкенд
-node server.js
-
-# 5. Запустите приложение (в новом терминале)
-npm start
+npm run reset-project
 ```
 
----
+This command will move the starter code to the **app-example** directory and create a blank **app** directory where you can start developing.
 
-## 📁 Структура проекта
+## Learn more
 
-```
-bardtell/
-├── app/                    # React Native приложение
-│   ├── (tabs)/            # Табы навигации
-│   │   ├── chats.tsx      # Экран чатов
-│   │   ├── contacts.tsx   # Экран контактов
-│   │   └── settings.tsx   # Экран настроек
-│   ├── auth.tsx           # Экран входа/регистрации
-│   ├── email-verification.tsx # Экран подтверждения email
-│   ├── chat/[id].tsx      # Экран чата
-│   └── _layout.tsx        # Навигация
-├── server.js              # Backend сервер
-├── .env                  # Переменные окружения
-├── package.json           # Зависимости проекта
-└── README.md             # Документация
-```
+To learn more about developing your project with Expo, look at the following resources:
 
----
+- [Expo documentation](https://docs.expo.dev/): Learn fundamentals, or go into advanced topics with our [guides](https://docs.expo.dev/guides).
+- [Learn Expo tutorial](https://docs.expo.dev/tutorial/introduction/): Follow a step-by-step tutorial where you'll create a project that runs on Android, iOS, and the web.
 
-## 🌐 API и WebSocket
+## Join the community
 
-### REST API Endpoints
-- `POST /api/register` — Регистрация
-- `POST /api/login` — Авторизация
-- `GET /api/chats` — Список чатов
-- `GET /api/chats/:id/messages` — Сообщения чата
-- `GET /api/users/:id` — Информация о пользователе
+Join our community of developers creating universal apps.
 
-### WebSocket События
-- `join` — Присоединение пользователя
-- `send-message` — Отправка сообщения
-- `receive-message` — Получение сообщения
-- `incoming-call` — Входящий звонок
-- `call-answer` — Ответ на звонок
-- `reject-call` — Отклонение звонка
-
----
-
-## 🔒 Безопасность и приватность
-
-- ✅ **JWT токены** с ограниченным сроком действия и refresh token
-- ✅ **bcryptjs** для надёжного хеширования паролей с salt
-- ✅ **Валидация** email и телефона на сервере и клиенте
-- ✅ **Защита** от дублирования аккаунтов и brute-force атак
-- ✅ **CORS** настройки для безопасного API
-- ✅ **Helmet** для защиты HTTP заголовков
-- ✅ **Rate limiting** для ограничения запросов
-
----
-
-## 🚀 Деплой в продакшн
-
-### Backend на VPS/Облако
-```bash
-# Установка PM2 для управления процессами
-npm install -g pm2
-
-# Запуск сервера в продакшн режиме
-pm2 start server.js --name bardtell-api
-pm2 save
-pm2 startup
-```
-
-### Mobile через EAS Build
-```bash
-# Логин в Expo Account
-eas login
-
-# Настройка проекта
-eas init
-
-# Сборка для Android (APK/AAB)
-eas build --platform android --profile production
-
-# Сборка для iOS (IPA) - требуется Apple Developer
-neas build --platform ios --profile production
-```
-
----
-
-## 🐛 Отладка и FAQ
-
-### Общие проблемы
-1. **Ошибка подключения к MongoDB** - проверьте URL в .env
-2. **Email не отправляется** - проверьте настройки Gmail и app password
-3. **Socket не подключается** - убедитесь что backend запущен
-
-### Логи
-- Backend логи в консоли
-- React Native логи через Expo CLI
-
-## 🤝 Вклад в проект
-
-Мы приветствуем вклад в проект! Для этого:
-
-1. Fork репозитория
-2. Создайте feature ветку (`git checkout -b feature/amazing-feature`)
-3. Сделайте commit изменений (`git commit -m 'Add amazing feature'`)
-4. Push в ветку (`git push origin feature/amazing-feature`)
-5. Откройте Pull Request
-
----
-
-## 📞 Поддержка
-
-- 📧 **Email:** support@bardtell.ru
-- 💬 **Telegram:** @bardtell_support
-- 🐛 **Issues:** [GitHub Issues](https://github.com/kaitarukian/bardtell/issues)
-
----
-
-## 📄 Лицензия
-
-Этот проект распространяется под лицензией MIT.
-
----
-
-<p align="center">
-  <strong>⭐ Star us on GitHub — это мотивирует нас развивать проект!</strong>
-</p>
-
-<p align="center">
-  <a href="https://github.com/kaitarukian/bardtell">GitHub</a> •
-  <a href="https://bardtell.ru">Website</a> •
-  <a href="https://t.me/bardtell">Telegram</a>
-</p>
-
----
-
-**Ключевые слова:** мессенджер, видеозвонки, голосовые звонки, чат, React Native, WebRTC, Socket.IO, мобильное приложение, кроссплатформенный, безопасный мессенджер, групповые чаты, видеоконференции
-
----
-
-© 2026 **BardTell**. Все права защищены. 
-Создано с ❤️ для безграничного общения.
+- [Expo on GitHub](https://github.com/expo/expo): View our open source platform and contribute.
+- [Discord community](https://chat.expo.dev): Chat with Expo users and ask questions.
 # bardtell
